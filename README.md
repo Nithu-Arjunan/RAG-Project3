@@ -1,5 +1,4 @@
-#
-Agentic RAG
+## RAG OPTMIZATION - ADAPTIVE RAG , CRAG , SELF RAG
 
 An end-to-end, local-first Agentic RAG app with a FastAPI backend and a React (Vite) frontend. Upload a document once, then ask questions with traceable retrieval and caching.
 
@@ -239,39 +238,6 @@ Registry files:
 - `data/ingestion_registry.json` is intentionally **not** ignored so it can be inspected.
 - `src/file_hash_registry.json` is a local CLI registry and **is** ignored in `.gitignore`.
 
-## Flow Diagram
-
-```mermaid
-flowchart TD
-  U[User] -->|Upload file| UI[React UI]
-  UI -->|POST /ingest| API[FastAPI]
-  API --> DOC[Docling convert]
-  DOC --> CHUNK[Chunking: parent/child]
-  CHUNK --> QDRANT[Qdrant vector store]
-  CHUNK --> BM25[BM25 index (pickle)]
-  API --> REG[Ingestion registry]
-
-  U -->|Ask question| UI
-  UI -->|POST /query| API
-  API --> CACHE[Cache layers: exact/semantic/retrieval]
-  CACHE -->|hit| RESP[Return cached answer]
-  CACHE -->|miss| ROUTER[Query Router]
-
-  ROUTER -->|A: Simple| GEN_A[Direct generation]
-  ROUTER -->|B: Retrieval| RETR_B[Retrieve + Rerank]
-  ROUTER -->|C: Multi-hop| RETR_C[Iterative retrieve + check]
-
-  RETR_B --> FUSION[Hybrid: Qdrant + BM25]
-  RETR_C --> FUSION
-  FUSION --> RERANK[Reranker (always on)]
-  RERANK --> GEN[Generate answer]
-  GEN_A --> RESP
-  GEN --> RESP
-  RESP --> UI
-```
-
-Static render:
-- `docs/flow-diagram.svg`
 
 ## Troubleshooting
 
