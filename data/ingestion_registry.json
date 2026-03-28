@@ -1,0 +1,14 @@
+{
+  "12d262c682626c26a98bdafc7ec5dc6af3fae8247d26d4f2c712b1599dafce62": {
+    "filename": "Adaptive_RAG.pdf",
+    "doc_name": "12d262c682626c26a98bdafc7ec5dc6af3fae8247d26d4f2c712b1599dafce62_Adaptive_RAG.pdf",
+    "collection_name": "rag_12d262c68262",
+    "bm25_path": "C:\\Users\\nithu\\Desktop\\GenAI\\Agentic-RAG\\data\\bm25\\12d262c682626c26a98bdafc7ec5dc6af3fae8247d26d4f2c712b1599dafce62.pkl"
+  },
+  "81ee918fc1ee1c1064ba8275d87e6d6e32f672e8d3322d6b36dea8effb43e6fb": {
+    "filename": "Nithu Arjunan_v1.2026.pdf",
+    "doc_name": "81ee918fc1ee1c1064ba8275d87e6d6e32f672e8d3322d6b36dea8effb43e6fb_Nithu Arjunan_v1.2026.pdf",
+    "collection_name": "rag_81ee918fc1ee",
+    "bm25_path": "C:\\Users\\nithu\\Desktop\\GenAI\\Agentic-RAG\\data\\bm25\\81ee918fc1ee1c1064ba8275d87e6d6e32f672e8d3322d6b36dea8effb43e6fb.pkl"
+  }
+}

@@ -1,0 +1,49 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+/build/
+/dist/
+
+# Virtual envs
+.venv/
+venv/
+
+# Env files
+.env
+.env.*
+
+# Caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Data & local stores
+/data/*
+!/data/ingestion_registry.json
+/qdrant_db/
+/data/uploads/
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Diagrams/Docs
+Architecture.docx
+Architecture_2.docx
+output.png
+output_SELF.png
+output_final.png
+output_CRAG.png
+test.py
+file_hash_registry.json
+docs/architecture-description.docx

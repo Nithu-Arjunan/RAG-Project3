@@ -1,0 +1,17 @@
+﻿bs4>=0.0.2
+docling>=2.80.0
+fastembed>=0.7.4
+google-cloud-aiplatform>=1.142.0
+langchain-community>=0.4.1
+langchain-huggingface>=1.2.1
+langchain-text-splitters>=1.1.1
+langchain[openai]>=1.2.12
+langgraph>=1.1.2
+litellm>=1.82.5
+qdrant-client==1.10.1
+sentence-transformers>=5.3.0
+pyyaml>=6.0.2
+fastapi>=0.115.0
+uvicorn>=0.30.0
+python-multipart>=0.0.9
+python-dotenv>=1.0.1

@@ -1,0 +1,38 @@
+model_list:
+  - model_name: classifier-model
+    litellm_params:
+      model: vertex_ai/gemini-2.5-flash-lite
+      vertex_project: os.getenv("VERTEX_PROJECT")
+      vertex_location: os.getenv("VERTEX_LOCATION")
+
+  - model_name: generator-model
+    litellm_params:
+      model: vertex_ai/gemini-2.5-flash-lite
+      vertex_project: os.getenv("VERTEX_PROJECT")
+      vertex_location: os.getenv("VERTEX_LOCATION")
+      temperature: 0.2
+      max_tokens: 1024
+
+cache:
+  backend: sqlite
+  database_path: data/cache.sqlite
+  exact_ttl_seconds: 86400
+  semantic_ttl_seconds: 86400
+  retrieval_ttl_seconds: 86400
+  semantic_threshold: 0.9
+  retrieval_threshold: 0.85
+
+rag:
+  chunk_size: 300
+  overlap: 50
+  max_words: 300
+  k_dense: 10
+  k_sparse: 10
+  top_n: 10
+  max_attempts: 6
+
+embedding:
+  model_name: sentence-transformers/all-MiniLM-L6-v2
+
+reranker:
+  model_name: cross-encoder/ms-marco-MiniLM-L-6-v2
